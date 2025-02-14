@@ -1,17 +1,28 @@
-import { Link } from "react-router-dom";
-import SearchOrder from "../features/order/SearchOrder";
-import Username from "../features/user/Username";
+// import { Link } from "react-router-dom";
+// import SearchOrder from "../features/order/SearchOrder";
+// import Username from "../features/user/Username";
+
+// font-['Playfair_Display']
+
+// Élan Beauty
 
 function Header() {
   return (
-    <header className="flex items-center justify-between border-b border-stone-200 bg-yellow-400 px-4 py-3 uppercase sm:px-6">
-      <Link to="/" className="tracking-widest">
-        Fast React Pizza Co.
-      </Link>
+    <div>
+      <div>
+        <p>Élan Beauty</p>
 
-      <SearchOrder />
-      <Username />
-    </header>
+        <p>About Us</p>
+
+        <p>Products</p>
+
+        <p>Reviews</p>
+      </div>
+
+      <div>
+        <p>Start Shopping</p>
+      </div>
+    </div>
   );
 }
 
