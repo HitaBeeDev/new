@@ -18,7 +18,7 @@ function Header() {
   return (
     <div className="grid grid-cols-2 justify-between items-center pl-16 pr-16 pt-6">
       <div className="flex justify-between items-center col-span-1">
-        <p className="font-['Playfair_Display'] font-semibold text-lg">
+        <p className="font-['Playfair_Display'] font-bold text-lg">
           Élan Beauty
         </p>
 
@@ -34,9 +34,14 @@ function Header() {
       </div>
 
       <div className="col-span-1 flex justify-end">
-        <p className="font-['Libre_Baskerville'] text-[0.8rem]">
-          Start Shopping
-        </p>
+        <div>
+          <button
+            className="font-['Libre_Baskerville'] text-[0.85rem] border border-[#F6E6DA] rounded-[1rem]
+        h-9 w-36 hover:bg-[#D4B189]/50 cursor-pointer hover:border-[#FFFBF5] transition-all duration-500"
+          >
+            Start Shopping
+          </button>
+        </div>
       </div>
     </div>
   );
