@@ -18,17 +18,19 @@ function Header() {
   return (
     <div className="grid grid-cols-2 justify-between items-center pl-16 pr-16 pt-6">
       <div className="flex justify-between items-center col-span-1">
-        <p className="font-['Playfair_Display'] font-bold text-lg">
+        <p className="font-['Playfair_Display'] font-bold text-lg cursor-pointer">
           Élan Beauty
         </p>
 
-        <p className="font-['Libre_Baskerville'] text-[0.8rem] font-medium">
+        <p className="font-['Libre_Baskerville'] text-[0.8rem] font-medium cursor-pointer">
           Our Story
         </p>
 
-        <p className="font-['Libre_Baskerville'] text-[0.8rem]">Our Products</p>
+        <p className="font-['Libre_Baskerville'] text-[0.8rem] cursor-pointer">
+          Our Products
+        </p>
 
-        <p className="font-['Libre_Baskerville'] text-[0.8rem]">
+        <p className="font-['Libre_Baskerville'] text-[0.8rem] cursor-pointer">
           Customer Reviews
         </p>
       </div>
