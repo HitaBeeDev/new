@@ -54,12 +54,14 @@ function Header() {
 
       <div className="col-span-1 flex justify-end">
         <div>
-          <button
-            className="font-['Libre_Baskerville'] text-[0.85rem] border border-[#F6E6DA] rounded-[1rem]
+          <Link to="/menu">
+            <button
+              className="font-['Libre_Baskerville'] text-[0.85rem] border border-[#F6E6DA] rounded-[1rem]
         h-9 w-36 hover:bg-[#D4B189]/50 cursor-pointer hover:border-[#FFFBF5] transition-all duration-500"
-          >
-            Start Shopping
-          </button>
+            >
+              Start Shopping
+            </button>
+          </Link>
         </div>
       </div>
     </div>
