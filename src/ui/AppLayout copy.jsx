@@ -8,14 +8,13 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="bg-[#FFFFFF] h-screen flex flex-col overflow-hidden">
+    <div className="bg-[#FFFBF5] max-h-screen h-screen">
       {isLoading && <Loader />}
 
       <Header />
 
-      {/* Main Content should expand while keeping the header & cart overview static */}
-      <div className="flex-grow">
-        <main className="h-full">
+      <div className="">
+        <main className="">
           <Outlet />
         </main>
       </div>

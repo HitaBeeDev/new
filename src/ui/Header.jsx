@@ -28,25 +28,25 @@ function Header() {
         </Link>
 
         <p
-          className="font-['Libre_Baskerville'] text-[0.8rem] font-medium cursor-pointer 
+          className="font-['Quicksand'] text-[0.9rem] font-medium cursor-pointer 
   border border-transparent hover:border-[#F6E6DA] transition-all duration-500 
-  h-8 w-28 rounded-[1rem] flex justify-center items-center"
+  h-8 w-28 rounded-[1rem] flex justify-center items-center text-[#E8B4B8]"
         >
           Our Story
         </p>
 
         <p
-          className="font-['Libre_Baskerville'] text-[0.8rem] font-medium cursor-pointer 
+          className="font-['Quicksand'] text-[0.9rem] font-medium cursor-pointer 
   border border-transparent hover:border-[#F6E6DA] transition-all duration-500 
-  h-8 w-32 rounded-[1rem] flex justify-center items-center"
+  h-8 w-32 rounded-[1rem] flex justify-center items-center text-[#E8B4B8]"
         >
           Our Products
         </p>
 
         <p
-          className="font-['Libre_Baskerville'] text-[0.8rem] font-medium cursor-pointer 
+          className="font-['Quicksand'] text-[0.9rem] font-medium cursor-pointer 
   border border-transparent hover:border-[#F6E6DA] transition-all duration-500 
-  h-8 w-40 rounded-[1rem] flex justify-center items-center"
+  h-8 w-40 rounded-[1rem] flex justify-center items-center text-[#E8B4B8]"
         >
           Customer Reviews
         </p>
@@ -56,8 +56,8 @@ function Header() {
         <div>
           <Link to="/menu">
             <button
-              className="font-['Libre_Baskerville'] text-[0.85rem] border border-[#F6E6DA] rounded-[1rem]
-        h-9 w-36 hover:bg-[#D4B189]/50 cursor-pointer hover:border-[#FFFBF5] transition-all duration-500"
+              className="font-['Quicksand'] font-medium text-[0.9rem] border border-[#F6E6DA] rounded-[1rem]
+        h-8 w-36 hover:bg-[#E8B4B8]/20 cursor-pointer hover:border-[#FFFBF5] transition-all duration-500"
             >
               Start Shopping
             </button>
