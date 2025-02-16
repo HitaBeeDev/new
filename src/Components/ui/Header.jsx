@@ -3,10 +3,7 @@
 // import Username from "../features/user/Username";
 import { useSelector } from "react-redux";
 import shoppingBag from "../../assets/shoppingBag.svg";
-import {
-  getTotalCartPrice,
-  getTotalCartQuantity,
-} from "../features/cart/cartSlice";
+import { getTotalCartQuantity } from "../features/cart/cartSlice";
 import { Link } from "react-router-dom";
 
 // font-['Playfair_Display']
@@ -23,8 +20,6 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const totalCartQuantity = useSelector(getTotalCartQuantity);
-
-  if (!totalCartQuantity) return null;
 
   return (
     <div className="grid grid-cols-2 justify-between items-center pl-16 pr-16 pt-6">
@@ -62,23 +57,28 @@ function Header() {
       </div>
 
       <div className="col-span-1 flex justify-end items-center gap-4">
-        {/* <Link to="/products-list">
-          <button
-            className="font-['Quicksand'] font-medium text-[0.9rem] rounded-[1rem]
-      h-9 w-36 cursor-pointer transition-all duration-500 bg-white text-[#5A4034] border border-[#5A4034]
-      hover:bg-[#F6E6DA] hover:border-[#F6E6DA]"
-          >
-            Start Shopping
-          </button>
-        </Link> */}
-
-        <div className="relative">
-          <img className="w-6" src={shoppingBag} alt="shopping bag" />
-
-          <p className="absolute top-1 right-0 translate-x-1/2 -translate-y-1/2 bg-[#E8B4B8] text-white text-xs font-medium rounded-full px-1">
-            {totalCartQuantity}
-          </p>
-        </div>
+        {totalCartQuantity > 0 ? (
+          <div className="relative">
+            <img className="w-7" src={shoppingBag} alt="shopping bag" />
+            <p
+              className="absolute top-[0.35rem] right-0 bg-[#ca6970] text-[#FFFBF5] 
+        w-5 h-5 text-[0.75rem] font-medium rounded-full font-['Quicksand']
+        flex justify-center items-center transform translate-x-1/2 -translate-y-1/2"
+            >
+              {totalCartQuantity}
+            </p>
+          </div>
+        ) : (
+          <Link to="/products-list">
+            <button
+              className="font-['Quicksand'] font-medium text-[0.9rem] rounded-[1rem]
+        h-9 w-36 cursor-pointer transition-all duration-500 bg-white text-[#5A4034] border border-[#5A4034]
+        hover:bg-[#F6E6DA] hover:border-[#F6E6DA]"
+            >
+              Start Shopping
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );
