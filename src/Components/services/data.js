@@ -13,11 +13,7 @@ export const productsList = {
         "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
       soldOut: false,
       mainImage: HYDROSOFTENINGLOTIONN1,
-      images: [
-        HYDROSOFTENINGLOTIONN2,
-        HYDROSOFTENINGLOTIONN3,
-        HYDROSOFTENINGLOTIONN4,
-      ],
+      images: [HYDROSOFTENINGLOTIONN2, HYDROSOFTENINGLOTIONN4],
     },
     {
       id: 1,
@@ -27,11 +23,13 @@ export const productsList = {
         "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
       soldOut: false,
       mainImage: HYDROSOFTENINGLOTIONN1,
-      images: [
-        HYDROSOFTENINGLOTIONN2,
-        HYDROSOFTENINGLOTIONN3,
-        HYDROSOFTENINGLOTIONN4,
+      images: [HYDROSOFTENINGLOTIONN2, HYDROSOFTENINGLOTIONN4],
+      application: [
+        "Apply every morning and evening after Clé de Peau Beauté The Serum.",
+        "Dispense three pumps onto a cotton pad.",
+        "Gently sweep across the skin for optimal absorption.",
       ],
+      text: "Used twice daily with three pumps per application, the product lasts approximately 42 days.",
     },
     {
       id: 1,

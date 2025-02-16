@@ -21,8 +21,17 @@ function Product({ productId }) {
 
   if (!product) return null;
 
-  const { id, name, unitPrice, soldOut, mainImage, description, images } =
-    product;
+  const {
+    id,
+    name,
+    unitPrice,
+    soldOut,
+    mainImage,
+    description,
+    images,
+    application,
+    text,
+  } = product;
 
   function handleAddToCart() {
     const newItem = {
@@ -104,25 +113,40 @@ function Product({ productId }) {
               </p>
             </div>
 
-            <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold mt-5">
-              {name}
-            </p>
+            <div className="grid grid-cols-12 gap-5 justify-between items-start mt-6">
+              <div className="col-span-3 bg-blue-200 flex flex-col justify-between h-full items-center gap-2">
+                <img src={mainImage} alt={name} className="" />
 
-            <p className="font-['Quicksand'] text-[0.9rem] text-[#5A4034] font-medium">
-              {description}
-            </p>
+                {images &&
+                  images.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`${index + 1}`}
+                      className="object-cover w-32 h-32 rounded-lg"
+                    />
+                  ))}
+              </div>
 
-            <div className="">
-              <img src={mainImage} alt="Main" className="" />
-              {images &&
-                images.map((img, index) => (
-                  <img
-                    key={index}
-                    src={img}
-                    alt={`${index + 1}`}
-                    className=""
-                  />
-                ))}
+              <div className="col-span-9">
+                <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold">
+                  {name}
+                </p>
+
+                <p className="font-['Quicksand'] text-[0.9rem] text-[#5A4034] font-medium">
+                  {description}
+                </p>
+
+                <p className="font-['Quicksand'] text-[0.8rem] text-[#5A4034] font-medium">
+                  {application?.length
+                    ? application
+                    : "No application instructions available"}
+                </p>
+
+                <p className="font-['Quicksand'] text-[0.7rem] text-[#5A4034] font-medium">
+                  {text || "No additional information available"}
+                </p>
+              </div>
             </div>
           </div>
         </div>
