@@ -13,7 +13,6 @@ function AppLayout() {
 
       <Header />
 
-      {/* Main Content should expand while keeping the header & cart overview static */}
       <div className="flex-grow">
         <main className="h-full">
           <Outlet />
