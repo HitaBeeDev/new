@@ -104,11 +104,11 @@ function Product({ productId }) {
               </p>
             </div>
 
-            <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold">
+            <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold mt-5">
               {name}
             </p>
 
-            <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold">
+            <p className="font-['Quicksand'] text-[0.9rem] text-[#5A4034] font-medium">
               {description}
             </p>
 
