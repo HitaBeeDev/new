@@ -1,24 +1,29 @@
+import HYDROSOFTENINGLOTIONN1 from "../../assets/Products/HYDRO-SOFTENING LOTION-N/HYDRO-SOFTENING LOTION-N1.png";
+import HYDROSOFTENINGLOTIONN2 from "../../assets/Products/HYDRO-SOFTENING LOTION-N/HYDRO-SOFTENING LOTION-N2.png";
+import HYDROSOFTENINGLOTIONN3 from "../../assets/Products/HYDRO-SOFTENING LOTION-N/HYDRO-SOFTENING LOTION-N3.png";
+import HYDROSOFTENINGLOTIONN4 from "../../assets/Products/HYDRO-SOFTENING LOTION-N/HYDRO-SOFTENING LOTION-N4.png";
+
 export const productsList = {
   "Skin Care": [
     {
       id: 1,
-      name: "Hydrating Glow Serum",
-      unitPrice: 25,
-      ingredients: ["Hyaluronic Acid", "Vitamin C", "Aloe Vera"],
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
       soldOut: false,
-      mainImage: "/images/hydrating-glow-serum/main.jpg",
+      mainImage: HYDROSOFTENINGLOTIONN1,
       images: [
-        "/images/hydrating-glow-serum/1.jpg",
-        "/images/hydrating-glow-serum/2.jpg",
-        "/images/hydrating-glow-serum/3.jpg",
-        "/images/hydrating-glow-serum/4.jpg",
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
       ],
     },
     {
       id: 2,
       name: "Renewal Night Cream",
       unitPrice: 30,
-      ingredients: ["Retinol", "Shea Butter", "Peptides"],
+      description: ["Retinol", "Shea Butter", "Peptides"],
       soldOut: false,
       mainImage: "/images/renewal-night-cream/main.jpg",
       images: [
@@ -34,7 +39,7 @@ export const productsList = {
       id: 3,
       name: "Matte Liquid Lipstick",
       unitPrice: 18,
-      shades: ["Red Velvet", "Nude Blush", "Deep Plum"],
+      description: ["Red Velvet", "Nude Blush", "Deep Plum"],
       soldOut: false,
       mainImage: "/images/matte-liquid-lipstick/main.jpg",
       images: [
@@ -48,7 +53,7 @@ export const productsList = {
       id: 4,
       name: "Flawless Finish Foundation",
       unitPrice: 28,
-      shades: ["Ivory", "Beige", "Mocha"],
+      description: ["Ivory", "Beige", "Mocha"],
       soldOut: true,
       mainImage: "/images/flawless-foundation/main.jpg",
       images: [
@@ -64,7 +69,7 @@ export const productsList = {
       id: 5,
       name: "Ultimate Skincare Collection",
       unitPrice: 75,
-      items: ["Glow Serum", "Night Cream", "SPF Moisturizer"],
+      description: ["Glow Serum", "Night Cream", "SPF Moisturizer"],
       soldOut: false,
       mainImage: "/images/skincare-collection/main.jpg",
       images: [
@@ -80,7 +85,7 @@ export const productsList = {
       id: 6,
       name: "Luminous Highlighter Palette",
       unitPrice: 35,
-      features: ["4 Shimmer Shades", "Buildable Glow"],
+      description: ["4 Shimmer Shades", "Buildable Glow"],
       soldOut: false,
       mainImage: "/images/highlighter-palette/main.jpg",
       images: [
@@ -96,7 +101,7 @@ export const productsList = {
       id: 7,
       name: "Silk Touch Setting Powder",
       unitPrice: 22,
-      features: ["Oil Control", "Blurring Effect"],
+      description: ["Oil Control", "Blurring Effect"],
       soldOut: false,
       mainImage: "/images/setting-powder/main.jpg",
       images: [

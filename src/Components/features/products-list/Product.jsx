@@ -17,7 +17,7 @@ function Product({ productId }) {
 
   if (!product) return null;
 
-  const { id, name, unitPrice, soldOut, imageUrl } = product;
+  const { id, name, unitPrice, soldOut, mainImage } = product;
 
   function handleAddToCart() {
     const newItem = {
@@ -31,39 +31,18 @@ function Product({ productId }) {
   }
 
   return (
-    <li className="product-item">
+    <div>
       <img
-        src={imageUrl}
+        src={mainImage}
         alt={name}
         className={`h-24 ${soldOut ? "opacity-70 grayscale" : ""}`}
       />
 
-      <div className="product-details">
-        <p className="product-name">{name}</p>
+      <div>
+        <p>{name}</p>
 
-        <p className="product-attributes">
-          {product.ingredients?.join(", ") ||
-            product.shades?.join(", ") ||
-            product.items?.join(", ") ||
-            product.features?.join(", ")}
-        </p>
-
-        <div className="product-actions">
-          {!soldOut ? (
-            <p className="product-price">{formatCurrency(unitPrice)}</p>
-          ) : (
-            <p className="product-sold-out">Sold out</p>
-          )}
-
-          {isInCart && (
-            <div className="cart-controls">
-              <UpdateItemQuantity
-                productId={id}
-                currentQuantity={currentQuantity}
-              />
-              <DeleteItem productId={id} />
-            </div>
-          )}
+        <div>
+          {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
 
           {!soldOut && !isInCart && (
             <Button type="small" onClick={handleAddToCart}>
@@ -72,7 +51,7 @@ function Product({ productId }) {
           )}
         </div>
       </div>
-    </li>
+    </div>
   );
 }
 
