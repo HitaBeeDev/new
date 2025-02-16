@@ -6,7 +6,13 @@ export const productsList = {
       unitPrice: 25,
       ingredients: ["Hyaluronic Acid", "Vitamin C", "Aloe Vera"],
       soldOut: false,
-      imageUrl: "/images/hydrating-glow-serum.jpg",
+      mainImage: "/images/hydrating-glow-serum/main.jpg",
+      images: [
+        "/images/hydrating-glow-serum/1.jpg",
+        "/images/hydrating-glow-serum/2.jpg",
+        "/images/hydrating-glow-serum/3.jpg",
+        "/images/hydrating-glow-serum/4.jpg",
+      ],
     },
     {
       id: 2,
@@ -14,7 +20,13 @@ export const productsList = {
       unitPrice: 30,
       ingredients: ["Retinol", "Shea Butter", "Peptides"],
       soldOut: false,
-      imageUrl: "/images/renewal-night-cream.jpg",
+      mainImage: "/images/renewal-night-cream/main.jpg",
+      images: [
+        "/images/renewal-night-cream/1.jpg",
+        "/images/renewal-night-cream/2.jpg",
+        "/images/renewal-night-cream/3.jpg",
+        "/images/renewal-night-cream/4.jpg",
+      ],
     },
   ],
   Makeup: [
@@ -24,7 +36,13 @@ export const productsList = {
       unitPrice: 18,
       shades: ["Red Velvet", "Nude Blush", "Deep Plum"],
       soldOut: false,
-      imageUrl: "/images/matte-liquid-lipstick.jpg",
+      mainImage: "/images/matte-liquid-lipstick/main.jpg",
+      images: [
+        "/images/matte-liquid-lipstick/1.jpg",
+        "/images/matte-liquid-lipstick/2.jpg",
+        "/images/matte-liquid-lipstick/3.jpg",
+        "/images/matte-liquid-lipstick/4.jpg",
+      ],
     },
     {
       id: 4,
@@ -32,7 +50,13 @@ export const productsList = {
       unitPrice: 28,
       shades: ["Ivory", "Beige", "Mocha"],
       soldOut: true,
-      imageUrl: "/images/flawless-foundation.jpg",
+      mainImage: "/images/flawless-foundation/main.jpg",
+      images: [
+        "/images/flawless-foundation/1.jpg",
+        "/images/flawless-foundation/2.jpg",
+        "/images/flawless-foundation/3.jpg",
+        "/images/flawless-foundation/4.jpg",
+      ],
     },
   ],
   "Exclusive Sets": [
@@ -42,7 +66,13 @@ export const productsList = {
       unitPrice: 75,
       items: ["Glow Serum", "Night Cream", "SPF Moisturizer"],
       soldOut: false,
-      imageUrl: "/images/skincare-collection.jpg",
+      mainImage: "/images/skincare-collection/main.jpg",
+      images: [
+        "/images/skincare-collection/1.jpg",
+        "/images/skincare-collection/2.jpg",
+        "/images/skincare-collection/3.jpg",
+        "/images/skincare-collection/4.jpg",
+      ],
     },
   ],
   "Best Sellers": [
@@ -52,7 +82,13 @@ export const productsList = {
       unitPrice: 35,
       features: ["4 Shimmer Shades", "Buildable Glow"],
       soldOut: false,
-      imageUrl: "/images/highlighter-palette.jpg",
+      mainImage: "/images/highlighter-palette/main.jpg",
+      images: [
+        "/images/highlighter-palette/1.jpg",
+        "/images/highlighter-palette/2.jpg",
+        "/images/highlighter-palette/3.jpg",
+        "/images/highlighter-palette/4.jpg",
+      ],
     },
   ],
   "New Arrivals": [
@@ -62,7 +98,13 @@ export const productsList = {
       unitPrice: 22,
       features: ["Oil Control", "Blurring Effect"],
       soldOut: false,
-      imageUrl: "/images/setting-powder.jpg",
+      mainImage: "/images/setting-powder/main.jpg",
+      images: [
+        "/images/setting-powder/1.jpg",
+        "/images/setting-powder/2.jpg",
+        "/images/setting-powder/3.jpg",
+        "/images/setting-powder/4.jpg",
+      ],
     },
   ],
 };
