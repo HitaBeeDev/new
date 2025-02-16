@@ -31,11 +31,11 @@ function Product({ productId }) {
   }
 
   return (
-    <div>
+    <div className="">
       <img
         src={mainImage}
         alt={name}
-        className={`h-24 ${soldOut ? "opacity-70 grayscale" : ""}`}
+        className={` ${soldOut ? "opacity-70 grayscale" : ""}`}
       />
 
       <div>
@@ -45,9 +45,7 @@ function Product({ productId }) {
           {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
 
           {!soldOut && !isInCart && (
-            <Button type="small" onClick={handleAddToCart}>
-              Add to cart
-            </Button>
+            <button onClick={handleAddToCart}>Add to cart</button>
           )}
         </div>
       </div>

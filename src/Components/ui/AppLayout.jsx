@@ -8,7 +8,7 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="bg-[#FFFFFF] h-screen flex flex-col overflow-hidden">
+    <div className="bg-[#FFFFFF] h-screen flex flex-col">
       {isLoading && <Loader />}
 
       <Header />

@@ -20,6 +20,132 @@ export const productsList = {
       ],
     },
     {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
+      id: 1,
+      name: "HYDRO-SOFTENING LOTION N",
+      unitPrice: 200,
+      description:
+        "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
+      soldOut: false,
+      mainImage: HYDROSOFTENINGLOTIONN1,
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
+    },
+    {
       id: 2,
       name: "Renewal Night Cream",
       unitPrice: 30,
@@ -35,6 +161,20 @@ export const productsList = {
     },
   ],
   Makeup: [
+    {
+      id: 3,
+      name: "Matte Liquid Lipstick",
+      unitPrice: 18,
+      description: ["Red Velvet", "Nude Blush", "Deep Plum"],
+      soldOut: false,
+      mainImage: "/images/matte-liquid-lipstick/main.jpg",
+      images: [
+        "/images/matte-liquid-lipstick/1.jpg",
+        "/images/matte-liquid-lipstick/2.jpg",
+        "/images/matte-liquid-lipstick/3.jpg",
+        "/images/matte-liquid-lipstick/4.jpg",
+      ],
+    },
     {
       id: 3,
       name: "Matte Liquid Lipstick",
