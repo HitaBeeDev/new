@@ -113,22 +113,26 @@ function Product({ productId }) {
               </p>
             </div>
 
-            <div className="grid grid-cols-12 gap-5 justify-between items-start mt-6">
-              <div className="col-span-3 bg-blue-200 flex flex-col justify-between h-full items-center gap-2">
-                <img src={mainImage} alt={name} className="" />
+            <div className="grid grid-cols-2 gap-5 justify-between items-start mt-6">
+              <div className="col-span-1 grid grid-cols-6 h-[24rem] gap-3">
+                <div className="col-span-2 flex flex-col justify-start items-center gap-3 h-[12rem]">
+                  {images &&
+                    images.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`${index + 1}`}
+                        className="object-cover w-[6.6rem] h-[6.6rem] rounded-lg"
+                      />
+                    ))}
+                </div>
 
-                {images &&
-                  images.map((img, index) => (
-                    <img
-                      key={index}
-                      src={img}
-                      alt={`${index + 1}`}
-                      className="object-cover w-32 h-32 rounded-lg"
-                    />
-                  ))}
+                <div className="col-span-4 border border-amber-200 w-[14rem] h-[14rem] rounded-2xl">
+                  <img src={mainImage} alt={name} className="object-cover" />
+                </div>
               </div>
 
-              <div className="col-span-9">
+              <div className="col-span-1">
                 <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold">
                   {name}
                 </p>
