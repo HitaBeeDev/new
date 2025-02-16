@@ -31,15 +31,15 @@ function Product({ productId }) {
   }
 
   return (
-    <div className="">
+    <div className="bg-blue-200 h-[20rem] rounded-xl shadow-sm p-3 flex flex-col justify-between items-center cursor-pointer">
       <img
         src={mainImage}
         alt={name}
-        className={` ${soldOut ? "opacity-70 grayscale" : ""}`}
+        className={`w-[80%] ${soldOut ? "opacity-70 grayscale" : ""}`}
       />
 
       <div>
-        <p>{name}</p>
+        <p className="font-['Quicksand'] text-[0.9rem] font-medium">{name}</p>
 
         <div>
           {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
