@@ -13,7 +13,11 @@ export const productsList = {
         "A lotion that promotes skin intelligence. It provides the skin with immediate and intense moisture and effectively prevents rough skin and dryness. It revitalizes, restructures and at the same time gives a lively radiance.",
       soldOut: false,
       mainImage: HYDROSOFTENINGLOTIONN1,
-      images: [HYDROSOFTENINGLOTIONN2, HYDROSOFTENINGLOTIONN4],
+      images: [
+        HYDROSOFTENINGLOTIONN2,
+        HYDROSOFTENINGLOTIONN3,
+        HYDROSOFTENINGLOTIONN4,
+      ],
     },
     {
       id: 1,

@@ -11,6 +11,7 @@ function Product({ productId }) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [thumbnails, setThumbnails] = useState([]);
 
   const allProducts = Object.values(productsList).flat();
   const product = allProducts.find((p) => p.id === productId);
@@ -45,7 +46,17 @@ function Product({ productId }) {
 
   function openModal() {
     setIsModalOpen(true);
-    setSelectedImage(mainImage); // Set the default image when opening modal
+    setSelectedImage(mainImage);
+    setThumbnails(images ? [mainImage, ...images] : [mainImage]); // Ensure mainImage is always in thumbnails
+  }
+
+  function handleImageClick(newImage) {
+    if (selectedImage !== newImage) {
+      setThumbnails((prev) =>
+        prev.map((img) => (img === newImage ? selectedImage : img))
+      );
+      setSelectedImage(newImage);
+    }
   }
 
   return (
@@ -129,20 +140,18 @@ function Product({ productId }) {
                 </div>
 
                 <div className="flex flex-row items-start gap-3 self-start">
-                  {images &&
-                    images.map((img, index) => (
-                      <img
-                        key={index}
-                        src={img}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="object-cover w-[6rem] h-[6rem] rounded-xl cursor-pointer border-2 border-transparent hover:border-amber-500"
-                        onClick={() => setSelectedImage(img)}
-                      />
-                    ))}
+                  {thumbnails.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="object-cover w-[6rem] h-[6rem] rounded-xl cursor-pointer border-2 border-transparent hover:border-amber-500"
+                      onClick={() => handleImageClick(img)}
+                    />
+                  ))}
                 </div>
               </div>
 
-              {/* Right Side: Product Details */}
               <div className="col-span-1">
                 <p className="font-['Quicksand'] text-[1.2rem] text-[#5A4034] font-semibold">
                   {name}
