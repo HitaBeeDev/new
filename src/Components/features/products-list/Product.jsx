@@ -82,7 +82,6 @@ function Product({ productId }) {
         </div>
       </div>
 
-      {/* Product Detail's Modal */}
       {isModalOpen && (
         <div
           className="fixed inset-0 backdrop-blur-sm bg-white/30 flex justify-center items-center z-50"
@@ -109,7 +108,6 @@ function Product({ productId }) {
                   />
                 </div>
 
-                {/* Circular Navigation Dots */}
                 <div className="flex justify-center gap-4 mt-3">
                   {imageList.map((_, index) => (
                     <div
