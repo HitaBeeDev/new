@@ -98,23 +98,23 @@ function Product({ productId }) {
             </div>
 
             <div className="grid grid-cols-2 gap-5 items-start mt-4">
-              <div className="col-span-1 flex flex-col self-start h-[25rem] gap-4 bg-red-50 border border-amber-200 rounded-2xl ">
-                <div className="w-[22rem] h-[22rem] overflow-hidden">
+              <div className="col-span-1 flex flex-col self-start h-[25rem] gap-4 border border-[#F6E6DA] rounded-2xl shadow-sm">
+                <div className="overflow-hidden rounded-xl flex justify-center items-center">
                   <img
                     src={imageList[selectedImageIndex]}
                     alt={name}
-                    className="object-cover w-full h-full"
+                    className="object-cover"
                   />
                 </div>
 
-                <div className="flex justify-center gap-3">
+                <div className="flex justify-center gap-3 mt-5">
                   {imageList.map((_, index) => (
                     <div
                       key={index}
                       className={`w-2 h-2 rounded-full cursor-pointer ${
                         selectedImageIndex === index
-                          ? "bg-amber-500"
-                          : "bg-gray-300"
+                          ? "bg-[#E8B4B8]"
+                          : "bg-[#F6E6DA]"
                       }`}
                       onClick={() => setSelectedImageIndex(index)}
                     ></div>
