@@ -41,7 +41,6 @@ function Product({ productId }) {
 
   return (
     <>
-      {/* Product Card */}
       <div
         className="h-[20rem] rounded-xl shadow-sm p-5 flex flex-col justify-between cursor-pointer group relative"
         onClick={openModal}
@@ -88,19 +87,19 @@ function Product({ productId }) {
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className="bg-white p-10 rounded-xl shadow-md w-full max-w-[50rem] relative h-[30rem]"
+            className="bg-white p-6 rounded-xl shadow-md w-full max-w-[50rem] relative h-[30rem]"
             onClick={(e) => e.stopPropagation()}
           >
             <div
-              className="absolute top-5 right-5 w-7 h-7 bg-[#F6E6DA] rounded-md flex justify-center items-center hover:bg-[#e2ad8f] transition-all duration-500 cursor-pointer"
+              className="absolute top-5 right-5 w-7 h-7 bg-[#F6E6DA] rounded-md flex justify-center items-center hover:bg-[#e2ad8f] transition-all duration-300 cursor-pointer"
               onClick={() => setIsModalOpen(false)}
             >
               ✕
             </div>
 
-            <div className="grid grid-cols-2 gap-5 items-start mt-5">
-              <div className="col-span-1 flex flex-col self-start h-[25rem] gap-4">
-                <div className="border border-amber-200 w-[19rem] h-[18rem] rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-2 gap-5 items-start mt-4">
+              <div className="col-span-1 flex flex-col self-start h-[25rem] gap-4 bg-red-50 border border-amber-200 rounded-2xl ">
+                <div className="w-[22rem] h-[22rem] overflow-hidden">
                   <img
                     src={imageList[selectedImageIndex]}
                     alt={name}
@@ -108,11 +107,11 @@ function Product({ productId }) {
                   />
                 </div>
 
-                <div className="flex justify-center gap-4 mt-3">
+                <div className="flex justify-center gap-3">
                   {imageList.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-4 h-4 rounded-full cursor-pointer ${
+                      className={`w-2 h-2 rounded-full cursor-pointer ${
                         selectedImageIndex === index
                           ? "bg-amber-500"
                           : "bg-gray-300"
