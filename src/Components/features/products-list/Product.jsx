@@ -87,31 +87,31 @@ function Product({ productId }) {
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className="bg-white p-6 rounded-xl shadow-md w-full max-w-[50rem] relative h-[30rem]"
+            className="bg-white p-10 rounded-xl shadow-md w-full max-w-[50rem] relative h-[30rem]"
             onClick={(e) => e.stopPropagation()}
           >
             <div
-              className="absolute top-5 right-5 w-7 h-7 bg-[#F6E6DA] rounded-md flex justify-center items-center hover:bg-[#e2ad8f] transition-all duration-300 cursor-pointer"
+              className="absolute top-5 right-5 w-7 h-7 bg-[#F6E6DA] rounded-md flex justify-center items-center hover:bg-[#e2ad8f] transition-all duration-500 cursor-pointer"
               onClick={() => setIsModalOpen(false)}
             >
               ✕
             </div>
 
-            <div className="grid grid-cols-2 gap-5 items-start mt-4">
-              <div className="col-span-1 flex flex-col self-start h-[25rem] gap-4 border border-[#F6E6DA] rounded-2xl shadow-sm">
-                <div className="overflow-hidden rounded-xl flex justify-center items-center">
+            <div className="grid grid-cols-2 gap-5 items-start mt-5">
+              <div className="col-span-1 flex flex-col self-start h-[25rem] gap-4 border border-[#F6E6DA] rounded-2xl shadow-sm relative">
+                <div className="overflow-hidden rounded-xl flex justify-center items-center h-full">
                   <img
                     src={imageList[selectedImageIndex]}
                     alt={name}
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
 
-                <div className="flex justify-center gap-3 mt-5">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
                   {imageList.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-2 h-2 rounded-full cursor-pointer ${
+                      className={`w-4 h-4 rounded-full cursor-pointer ${
                         selectedImageIndex === index
                           ? "bg-[#E8B4B8]"
                           : "bg-[#F6E6DA]"
