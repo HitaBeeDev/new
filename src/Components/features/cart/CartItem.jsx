@@ -12,8 +12,34 @@ function CartItem({ product }) {
   const currentQuantity = useSelector(getCurrentQuantityById(id));
 
   return (
-    <li className="py-3 sm:flex sm:items-center sm:justify-between">
-      <p className="mb-1 sm:mb-0">
+    <div>
+      <table className="table-fixed w-full">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="bg-red-50 w-4/12 font-['Quicksand'] text-[0.9rem] font-medium">
+              Product
+            </th>
+
+            <th className="bg-red-100 w-4/12 font-['Quicksand'] text-[0.9rem] font-medium">
+              Product Name
+            </th>
+
+            <th className="bg-red-200 w-2/5 font-['Quicksand'] text-[0.9rem] font-medium">
+              Price
+            </th>
+
+            <th className="bg-red-300 w-1/5 font-['Quicksand'] text-[0.9rem] font-medium">
+              Quantity
+            </th>
+
+            <th className="bg-red-400 w-1/5 font-['Quicksand'] text-[0.9rem] font-medium">
+              Remove
+            </th>
+          </tr>
+        </thead>
+      </table>
+
+      {/* <p className="mb-1 sm:mb-0">
         {quantity}&times; {name}
       </p>
 
@@ -26,8 +52,8 @@ function CartItem({ product }) {
 
         <UpdateItemQuantity productId={id} currentQuantity={currentQuantity} />
         <DeleteItem productId={id} />
-      </div>
-    </li>
+      </div> */}
+    </div>
   );
 }
 

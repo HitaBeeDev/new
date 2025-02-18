@@ -18,11 +18,11 @@ function Cart() {
         Your Shopping Basket
       </p>
 
-      <ul>
+      <div>
         {cart.map((product) => (
           <CartItem product={product} key={product.id} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
