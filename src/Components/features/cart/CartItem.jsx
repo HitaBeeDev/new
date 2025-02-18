@@ -15,24 +15,24 @@ function CartItem({ product }) {
     <div>
       <table className="table-fixed w-full">
         <thead>
-          <tr className="bg-gray-100">
-            <th className="bg-red-50 w-3/12 font-['Quicksand'] text-[0.9rem] font-medium">
+          <tr className="h-10 border-b border-[#F6E6DA]">
+            <th className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
               Product
             </th>
 
-            <th className="bg-red-100 w-3/12 font-['Quicksand'] text-[0.9rem] font-medium">
+            <th className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
               Product Name
             </th>
 
-            <th className="bg-red-200 w-2/12 font-['Quicksand'] text-[0.9rem] font-medium">
+            <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
               Price
             </th>
 
-            <th className="bg-red-300 w-2/12 font-['Quicksand'] text-[0.9rem] font-medium">
+            <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
               Quantity
             </th>
 
-            <th className="bg-red-400 w-2/12 font-['Quicksand'] text-[0.9rem] font-medium">
+            <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
               Remove
             </th>
           </tr>
