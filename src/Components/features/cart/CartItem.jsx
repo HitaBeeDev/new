@@ -33,26 +33,42 @@ function CartItem({ product }) {
             </th>
 
             <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
-              Remove
+              Action
             </th>
           </tr>
         </thead>
+
+        <tbody>
+          <tr>
+            <td className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-50 text-center">
+              <img
+                className="flex justify-center items-center w-32 h-32"
+                src={mainImage}
+                alt={name}
+              />
+            </td>
+
+            <td className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-100 text-center">
+              {name}
+            </td>
+
+            <td className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-200 text-center">
+              {formatCurrency(quantity * unitPrice)}
+            </td>
+
+            <td className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-300 text-center">
+              <UpdateItemQuantity
+                productId={id}
+                currentQuantity={currentQuantity}
+              />
+            </td>
+
+            <td className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-400 text-center">
+              <DeleteItem productId={id} />
+            </td>
+          </tr>
+        </tbody>
       </table>
-
-      {/* <p className="mb-1 sm:mb-0">
-        {quantity}&times; {name}
-      </p>
-
-      <img className="w-72 h-72" src={mainImage} alt={name} />
-
-      <div className="flex items-center justify-between sm:gap-6">
-        <p className="text-sm font-bold">
-          {formatCurrency(quantity * unitPrice)}
-        </p>
-
-        <UpdateItemQuantity productId={id} currentQuantity={currentQuantity} />
-        <DeleteItem productId={id} />
-      </div> */}
     </div>
   );
 }
