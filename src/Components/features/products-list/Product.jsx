@@ -21,8 +21,7 @@ function Product({ productId }) {
 
   if (!product) return null;
 
-  const { id, name, unitPrice, soldOut, mainImage, description, images } =
-    product;
+  const { id, name, unitPrice, soldOut, mainImage, description } = product;
 
   function handleAddToCart() {
     dispatch(
@@ -31,7 +30,8 @@ function Product({ productId }) {
         name,
         quantity: 1,
         unitPrice,
-        totalPrice: unitPrice,
+        totalPrice: unitPrice * 1,
+        mainImage,
       })
     );
   }

@@ -17,7 +17,7 @@ function CartItem({ product }) {
         {quantity}&times; {name}
       </p>
 
-      <img src={mainImage} alt={name} />
+      <img className="w-72 h-72" src={mainImage} alt={name} />
 
       <div className="flex items-center justify-between sm:gap-6">
         <p className="text-sm font-bold">
