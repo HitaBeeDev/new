@@ -13,26 +13,16 @@ function Cart() {
   if (!cart.length) return <EmptyCart />;
 
   return (
-    <div className="px-4 py-3">
-      <LinkButton to="/products-list">&larr; Back to menu</LinkButton>
+    <div className="mt-6 pl-16 pr-16 flex flex-col justify-center items-center">
+      <p className="font-['Quicksand'] text-[1.5rem] text-[#2e1f1a] font-[500] leading-[6rem] tracking-[0.15rem]">
+        Your Shopping Basket
+      </p>
 
-      <h2 className="mt-7 text-xl font-semibold">Your cart, {username}</h2>
-
-      <ul className="mt-3 divide-y divide-stone-200 border-b">
-        {cart.map((item) => (
-          <CartItem item={item} key={item.pizzaId} />
+      <ul>
+        {cart.map((product) => (
+          <CartItem product={product} key={product.id} />
         ))}
       </ul>
-
-      <div className="mt-6 space-x-2">
-        <Button to="/order/new" type="primary">
-          Order pizzas
-        </Button>
-
-        <Button type="secondary" onClick={() => dispatch(clearCart())}>
-          Clear cart
-        </Button>
-      </div>
     </div>
   );
 }
