@@ -18,7 +18,7 @@ function Cart() {
         Your Shopping Basket
       </p>
 
-      <div>
+      <div className="ml-44 mr-44 mt-5">
         {cart.map((product) => (
           <CartItem product={product} key={product.id} />
         ))}
