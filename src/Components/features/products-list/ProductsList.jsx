@@ -34,7 +34,7 @@ function ProductsList() {
       </div>
 
       {/* 🔥 Corrected to map over products from the selected category */}
-      <div className="grid grid-cols-6 gap-6 mt-8">
+      <div className="grid grid-cols-4 gap-6 mt-8">
         {products.map((product) => (
           <Product productId={product.id} key={product.id} />
         ))}

@@ -31,7 +31,7 @@ function Header() {
           Élan
         </Link>
 
-        <p
+        {/* <p
           className="font-['Quicksand'] text-[0.9rem] font-medium cursor-pointer 
   border border-transparent hover:border-[#F6E6DA] transition-all duration-500 
   h-8 w-28 rounded-[1rem] flex justify-center items-center text-[#5A4034]"
@@ -53,12 +53,12 @@ function Header() {
   h-8 w-40 rounded-[1rem] flex justify-center items-center text-[#5A4034]"
         >
           Customer Reviews
-        </p>
+        </p> */}
       </div>
 
       <div className="col-span-1 flex justify-end items-center gap-4">
         {totalCartQuantity > 0 ? (
-          <div className="relative">
+          <Link to="/cart" className="relative">
             <img className="w-7" src={shoppingBag} alt="shopping bag" />
             <p
               className="absolute top-[0.35rem] right-0 bg-[#ca6970] text-[#FFFBF5] 
@@ -67,7 +67,7 @@ function Header() {
             >
               {totalCartQuantity}
             </p>
-          </div>
+          </Link>
         ) : (
           <Link to="/products-list">
             <button
