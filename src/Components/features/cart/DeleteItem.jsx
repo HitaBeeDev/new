@@ -1,14 +1,18 @@
-import { useDispatch } from 'react-redux';
-import Button from '../../ui/Button';
-import { deleteItem } from './cartSlice';
+import { useDispatch } from "react-redux";
+import { deleteItem } from "./cartSlice";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
-function DeleteItem({ pizzaId }) {
+function DeleteItem({ productId }) {
   const dispatch = useDispatch();
 
   return (
-    <Button type="small" onClick={() => dispatch(deleteItem(pizzaId))}>
-      Delete
-    </Button>
+    <button
+      className="text-[#5A4034] bg-[#F6E6DA] w-7 h-7 rounded-full cursor-pointer"
+      onClick={() => dispatch(deleteItem(productId))}
+    >
+      <FontAwesomeIcon icon={faTrashCan} />
+    </button>
   );
 }
 

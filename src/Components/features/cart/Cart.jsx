@@ -18,11 +18,13 @@ function Cart() {
         Your Shopping Basket
       </p>
 
-      <div className="ml-44 mr-44 mt-5">
+      <ul className="ml-32 mr-32 mt-8 w-full flex flex-col gap-4">
         {cart.map((product) => (
-          <CartItem product={product} key={product.id} />
+          <li key={product.id}>
+            <CartItem product={product} />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

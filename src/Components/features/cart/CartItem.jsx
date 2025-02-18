@@ -5,70 +5,23 @@ import UpdateItemQuantity from "./UpdateItemQuantity";
 import { getCurrentQuantityById } from "./cartSlice";
 
 function CartItem({ product }) {
-  console.log("CartItem Product:", product);
-
-  const { id, name, quantity, unitPrice, mainImage } = product;
-
-  const currentQuantity = useSelector(getCurrentQuantityById(id));
+  const { id, name, quantity, unitPrice } = product;
+  const currentQuantity = useSelector((state) =>
+    getCurrentQuantityById(id)(state)
+  );
 
   return (
-    <div>
-      <table className="table-fixed w-full">
-        <thead>
-          <tr className="h-10 border-b border-[#F6E6DA]">
-            <th className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
-              Product
-            </th>
-
-            <th className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
-              Product Name
-            </th>
-
-            <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
-              Price
-            </th>
-
-            <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
-              Quantity
-            </th>
-
-            <th className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1">
-              Action
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td className="w-3/12">
-              <div className="flex justify-center items-center">
-                <img className="w-28 h-28" src={mainImage} alt={name} />
-              </div>
-            </td>
-
-            <td className="w-3/12 font-['Quicksand'] text-[0.8rem] font-semibold text-[#5A4034] text-center">
-              {name}
-            </td>
-
-            <td className="w-2/12 font-['Quicksand'] text-[0.8rem] font-semibold text-[#5A4034] text-center">
-              {formatCurrency(quantity * unitPrice)}
-            </td>
-
-            <td className="w-2/12 font-['Quicksand'] text-[0.8rem] font-medium text-[#5A4034] bg-red-300 text-center">
-              <div className="flex justify-center items-center">
-                <UpdateItemQuantity
-                  productId={id}
-                  currentQuantity={currentQuantity}
-                />
-              </div>
-            </td>
-
-            <td className="w-2/12 font-['Quicksand'] text-[0.8rem] font-medium text-[#5A4034] pb-1 bg-red-400 text-center">
-              <DeleteItem productId={id} />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
+      <p className="mb-1 sm:mb-0">
+        {quantity}× {name}
+      </p>
+      <div className="flex items-center justify-between sm:gap-6">
+        <p className="text-sm font-bold">
+          {formatCurrency(quantity * unitPrice)}
+        </p>
+        <UpdateItemQuantity productId={id} currentQuantity={currentQuantity} />
+        <DeleteItem productId={id} />
+      </div>
     </div>
   );
 }

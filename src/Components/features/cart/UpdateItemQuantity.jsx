@@ -1,25 +1,32 @@
 import { useDispatch } from "react-redux";
-import Button from "../../ui/Button";
 import { decreaseItemQuantity, increaseItemQuantity } from "./cartSlice";
 
-function UpdateItemQuantity({ pizzaId, currentQuantity }) {
+function UpdateItemQuantity({ productId, currentQuantity }) {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <Button
-        type="round"
-        onClick={() => dispatch(decreaseItemQuantity(pizzaId))}
+    <div className="flex flex-row items-center gap-4">
+      <button
+        className="bg-[#E8B4B8] text-[#FFFBF5] 
+        w-6 h-6 text-[0.9rem] font-medium rounded-full font-['Quicksand']
+        flex justify-center items-center"
+        onClick={() => dispatch(decreaseItemQuantity(productId))}
       >
         -
-      </Button>
-      <span className="text-sm font-medium">{currentQuantity}</span>
-      <Button
-        type="round"
-        onClick={() => dispatch(increaseItemQuantity(pizzaId))}
+      </button>
+
+      <p className="text-[0.9rem] text-[#5A4034] font-semibold">
+        {currentQuantity}
+      </p>
+
+      <button
+        className="bg-[#E8B4B8] text-[#FFFBF5] 
+        w-6 h-6 text-[0.9rem] font-medium rounded-full font-['Quicksand']
+        flex justify-center items-center"
+        onClick={() => dispatch(increaseItemQuantity(productId))}
       >
         +
-      </Button>
+      </button>
     </div>
   );
 }
