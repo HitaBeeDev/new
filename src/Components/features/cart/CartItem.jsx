@@ -40,30 +40,30 @@ function CartItem({ product }) {
 
         <tbody>
           <tr>
-            <td className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-50 text-center">
-              <img
-                className="flex justify-center items-center w-32 h-32"
-                src={mainImage}
-                alt={name}
-              />
+            <td className="w-3/12">
+              <div className="flex justify-center items-center">
+                <img className="w-28 h-28" src={mainImage} alt={name} />
+              </div>
             </td>
 
-            <td className="w-3/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-100 text-center">
+            <td className="w-3/12 font-['Quicksand'] text-[0.8rem] font-semibold text-[#5A4034] text-center">
               {name}
             </td>
 
-            <td className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-200 text-center">
+            <td className="w-2/12 font-['Quicksand'] text-[0.8rem] font-semibold text-[#5A4034] text-center">
               {formatCurrency(quantity * unitPrice)}
             </td>
 
-            <td className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-300 text-center">
-              <UpdateItemQuantity
-                productId={id}
-                currentQuantity={currentQuantity}
-              />
+            <td className="w-2/12 font-['Quicksand'] text-[0.8rem] font-medium text-[#5A4034] bg-red-300 text-center">
+              <div className="flex justify-center items-center">
+                <UpdateItemQuantity
+                  productId={id}
+                  currentQuantity={currentQuantity}
+                />
+              </div>
             </td>
 
-            <td className="w-2/12 font-['Quicksand'] text-[0.9rem] font-medium text-[#5A4034] pb-1 bg-red-400 text-center">
+            <td className="w-2/12 font-['Quicksand'] text-[0.8rem] font-medium text-[#5A4034] pb-1 bg-red-400 text-center">
               <DeleteItem productId={id} />
             </td>
           </tr>
