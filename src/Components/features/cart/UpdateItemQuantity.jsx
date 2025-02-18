@@ -7,9 +7,7 @@ function UpdateItemQuantity({ productId, currentQuantity }) {
   return (
     <div className="flex flex-row items-center gap-4">
       <button
-        className="bg-[#E8B4B8] text-[#FFFBF5] 
-        w-6 h-6 text-[0.9rem] font-medium rounded-full font-['Quicksand']
-        flex justify-center items-center"
+        className="bg-[#E8B4B8] text-[#FFFBF5] w-6 h-6 text-[0.9rem] font-medium rounded-full flex justify-center items-center"
         onClick={() => dispatch(decreaseItemQuantity(productId))}
       >
         -
@@ -20,9 +18,7 @@ function UpdateItemQuantity({ productId, currentQuantity }) {
       </p>
 
       <button
-        className="bg-[#E8B4B8] text-[#FFFBF5] 
-        w-6 h-6 text-[0.9rem] font-medium rounded-full font-['Quicksand']
-        flex justify-center items-center"
+        className="bg-[#E8B4B8] text-[#FFFBF5] w-6 h-6 text-[0.9rem] font-medium rounded-full flex justify-center items-center"
         onClick={() => dispatch(increaseItemQuantity(productId))}
       >
         +

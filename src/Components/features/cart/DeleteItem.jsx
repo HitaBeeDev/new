@@ -9,7 +9,10 @@ function DeleteItem({ productId }) {
   return (
     <button
       className="text-[#5A4034] bg-[#F6E6DA] w-7 h-7 rounded-full cursor-pointer"
-      onClick={() => dispatch(deleteItem(productId))}
+      onClick={() => {
+        console.log("Deleting item!!!!!:", productId);
+        dispatch(deleteItem(productId));
+      }}
     >
       <FontAwesomeIcon icon={faTrashCan} />
     </button>

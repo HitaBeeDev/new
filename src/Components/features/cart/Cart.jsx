@@ -1,14 +1,13 @@
-import LinkButton from "../../ui/LinkButton";
-import Button from "../../ui/Button";
-import CartItem from "./CartItem";
-import EmptyCart from "./EmptyCart";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart } from "./cartSlice";
+import CartItem from "./CartItem";
+import EmptyCart from "./EmptyCart";
 
 function Cart() {
-  const username = useSelector((state) => state.user.username);
   const cart = useSelector(getCart);
   const dispatch = useDispatch();
+
+  console.log(cart); // Log the cart state to verify its contents
 
   if (!cart.length) return <EmptyCart />;
 
@@ -18,13 +17,20 @@ function Cart() {
         Your Shopping Basket
       </p>
 
-      <ul className="ml-32 mr-32 mt-8 w-full flex flex-col gap-4">
+      <ul className="mt-8 w-full list-disc pl-6">
         {cart.map((product) => (
-          <li key={product.id}>
+          <li key={product.id} className="mb-4 border-b pb-2">
             <CartItem product={product} />
           </li>
         ))}
       </ul>
+
+      <button
+        className="mt-6 bg-red-500 text-white px-4 py-2 rounded"
+        onClick={() => dispatch(clearCart())}
+      >
+        Clear Cart
+      </button>
     </div>
   );
 }

@@ -5,23 +5,24 @@ import UpdateItemQuantity from "./UpdateItemQuantity";
 import { getCurrentQuantityById } from "./cartSlice";
 
 function CartItem({ product }) {
-  const { id, name, quantity, unitPrice } = product;
+  const { productId, name, unitPrice } = product;
   const currentQuantity = useSelector((state) =>
-    getCurrentQuantityById(id)(state)
+    getCurrentQuantityById(productId)(state)
   );
 
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
-      <p className="mb-1 sm:mb-0">
-        {quantity}× {name}
+    <div className="flex justify-between items-center">
+      <p className="text-md font-semibold">
+        {currentQuantity} × {name}
       </p>
-      <div className="flex items-center justify-between sm:gap-6">
-        <p className="text-sm font-bold">
-          {formatCurrency(quantity * unitPrice)}
-        </p>
-        <UpdateItemQuantity productId={id} currentQuantity={currentQuantity} />
-        <DeleteItem productId={id} />
-      </div>
+      <p className="text-sm font-bold">
+        {formatCurrency(currentQuantity * unitPrice)}
+      </p>
+      <UpdateItemQuantity
+        productId={productId}
+        currentQuantity={currentQuantity}
+      />
+      <DeleteItem productId={productId} />
     </div>
   );
 }
