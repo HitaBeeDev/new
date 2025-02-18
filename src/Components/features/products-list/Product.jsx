@@ -21,19 +21,8 @@ function Product({ productId }) {
 
   if (!product) return null;
 
-  const {
-    id,
-    name,
-    unitPrice,
-    soldOut,
-    mainImage,
-    description,
-    images,
-    application,
-    text,
-  } = product;
-
-  const imageList = images?.length ? [mainImage, ...images] : [mainImage];
+  const { id, name, unitPrice, soldOut, mainImage, description, images } =
+    product;
 
   function handleAddToCart() {
     dispatch(
@@ -51,16 +40,6 @@ function Product({ productId }) {
     setIsModalOpen(true);
     setSelectedImageIndex(0);
     setFade(true);
-  }
-
-  function handleImageChange(index) {
-    if (index !== selectedImageIndex) {
-      setFade(false);
-      setTimeout(() => {
-        setSelectedImageIndex(index);
-        setFade(true);
-      }, 150);
-    }
   }
 
   return (
