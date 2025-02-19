@@ -11,18 +11,25 @@ function CartItem({ product }) {
   );
 
   return (
-    <div className="flex justify-between items-center">
-      <p className="text-md font-semibold">
+    <div className="grid grid-cols-12 justify-center items-center">
+      <div className="col-span-6 font-['Quicksand'] text-[0.9rem] font-medium">
         {currentQuantity} × {name}
-      </p>
-      <p className="text-sm font-bold">
+      </div>
+
+      <div className="col-span-2 font-['Quicksand'] text-[0.9rem] font-medium">
         {formatCurrency(currentQuantity * unitPrice)}
-      </p>
-      <UpdateItemQuantity
-        productId={productId}
-        currentQuantity={currentQuantity}
-      />
-      <DeleteItem productId={productId} />
+      </div>
+
+      <div className="col-span-2 flex justify-center">
+        <UpdateItemQuantity
+          productId={productId}
+          currentQuantity={currentQuantity}
+        />
+      </div>
+
+      <div className="col-span-2 flex justify-center">
+        <DeleteItem productId={productId} />
+      </div>
     </div>
   );
 }

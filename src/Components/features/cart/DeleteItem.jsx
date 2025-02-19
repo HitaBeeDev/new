@@ -8,13 +8,15 @@ function DeleteItem({ productId }) {
 
   return (
     <button
-      className="text-[#5A4034] bg-[#F6E6DA] w-7 h-7 rounded-full cursor-pointer"
+      className="bg-[#F6E6DA]/50 w-8 h-8 flex justify-center items-center text-center rounded-full cursor-pointer"
       onClick={() => {
-        console.log("Deleting item!!!!!:", productId);
         dispatch(deleteItem(productId));
       }}
     >
-      <FontAwesomeIcon icon={faTrashCan} />
+      <FontAwesomeIcon
+        className="text-[0.8rem] text-[#5A4034]"
+        icon={faTrashCan}
+      />
     </button>
   );
 }
