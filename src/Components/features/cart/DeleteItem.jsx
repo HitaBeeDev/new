@@ -8,13 +8,13 @@ function DeleteItem({ productId }) {
 
   return (
     <button
-      className="bg-[#F6E6DA]/50 w-8 h-8 flex justify-center items-center text-center rounded-full cursor-pointer"
+      className="bg-[#F6E6DA]/50 md:w-8 md:h-8 w-6 h-6 flex justify-center items-center text-center rounded-full cursor-pointer"
       onClick={() => {
         dispatch(deleteItem(productId));
       }}
     >
       <FontAwesomeIcon
-        className="text-[0.8rem] text-[#5A4034]"
+        className="md:text-[0.8rem] text-[0.7rem] text-[#5A4034]"
         icon={faTrashCan}
       />
     </button>

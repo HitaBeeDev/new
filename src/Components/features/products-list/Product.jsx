@@ -66,7 +66,8 @@ function Product({ productId }) {
 
             {!soldOut && (
               <div
-                className="absolute top-4 right-4 bg-[#F6E6DA] rounded-md w-7 h-7 flex justify-center items-center hover:bg-[#e2ad8f] transition-all duration-500 opacity-0 group-hover:opacity-100"
+                className="absolute top-4 right-4 bg-[#F6E6DA] rounded-md w-7 h-7 flex justify-center items-center
+                 hover:bg-[#e2ad8f] transition-all duration-500 md:opacity-0 group-hover:opacity-100"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleAddToCart();

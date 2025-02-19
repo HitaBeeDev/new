@@ -18,7 +18,7 @@ function Cart() {
         Your Shopping Basket
       </p>
 
-      <div className="mt-6 border border-[#FFFBF5] w-2/3 pt-5 pb-5 pl-8 pr-8 rounded-[1.5rem] shadow-md">
+      <div className="md:mt-6 border border-[#FFFBF5] md:w-2/3 w-full md:pt-5 md:pb-5 md:pl-8 md:pr-8 md:rounded-[1.5rem] md:shadow-md">
         <ul className="">
           {cart.map((product) => (
             <li className="border-b border-[#F6E6DA] mb-5 p-4" key={product.id}>
@@ -27,14 +27,7 @@ function Cart() {
           ))}
         </ul>
 
-        {/* #F6E6DA  (Soft Nude)
- #FFFBF5  (Ivory White)
- #E8B4B8  (Muted Rose)
- #9C8F8F  (Satin Taupe)
- #5A4034  (Deep Espresso)
-#D4B189  (Subtle Gold) */}
-
-        <div className="flex flex-row justify-between items-center mt-20">
+        <div className="flex md:flex-row flex-col justify-between items-center mt-20">
           <div className="flex flex-row gap-5">
             <Link to="/products-list">
               <button
@@ -53,16 +46,18 @@ function Cart() {
             </button>
           </div>
 
-          <div
-            className="h-9 w-[8.5rem] cursor-pointer rounded-[1rem] border border-[#9C8F8F] flex justify-center items-center
+          <div className="flex justify-end items-end w-full mr-20 mt-5 md:!flex-none md:!justify-normal md:!items-start md:!w-auto md:!mr-0 md:!mt-0">
+            <div
+              className="h-9 md:w-[8.5rem] w-40 cursor-pointer rounded-[1rem] border border-[#9C8F8F] flex justify-center items-center
           transition-all duration-500 hover:bg-[#E8B4B8] bg-[#9C8F8F] hover:border-[#E8B4B8]"
-          >
-            <Link
-              className="font-['Quicksand'] font-medium text-[0.9rem] text-[#FFFBF5]"
-              to="/order/new"
             >
-              Order pizzas
-            </Link>
+              <Link
+                className="font-['Quicksand'] font-medium text-[0.9rem] text-[#FFFBF5]"
+                to="/order/new"
+              >
+                Order
+              </Link>
+            </div>
           </div>
         </div>
       </div>

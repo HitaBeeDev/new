@@ -52,13 +52,13 @@ function CreateOrder() {
 
   return (
     <div className="mt-6 flex flex-col justify-center items-center">
-      <p className="font-['Quicksand'] text-[1.2rem] text-[#2e1f1a] font-[500] leading-[6rem] tracking-[0.15rem]">
+      <p className="font-['Quicksand'] md:text-[1.2rem] text-[1rem] text-[#2e1f1a] font-[500] md:leading-[6rem] md:tracking-[0.15rem] mt-10 md:mt-0">
         Ready to place your order? Let’s make it happen!
       </p>
 
       <Form
         method="POST"
-        className="mt-6 border border-[#FFFBF5] rounded-[1.5rem] shadow-md grid grid-cols-2 gap-y-4 items-center p-5"
+        className="mt-6 md:border md:border-[#FFFBF5] md:rounded-[1.5rem] md:shadow-md grid grid-cols-2 gap-y-4 items-center p-5"
       >
         {/* First Name */}
         <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
@@ -66,7 +66,7 @@ function CreateOrder() {
         </label>
         <input
           className="border border-[#F6E6DA] rounded-[1rem] text-[#5A4034] font-['Quicksand'] 
-      font-medium text-[0.85rem] h-[2.5rem] w-[18rem] pl-3 focus:outline-none focus:border-[#F6E6DA]"
+      font-medium text-[0.85rem] h-[2.5rem] md:w-[18rem] pl-3 focus:outline-none focus:border-[#F6E6DA]"
           type="text"
           name="customer"
           defaultValue={username}
@@ -80,7 +80,7 @@ function CreateOrder() {
         </label>
         <input
           className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium 
-      text-[0.85rem] h-[2.5rem] w-[18rem] pl-3 text-[#5A4034] focus:outline-none focus:border-[#F6E6DA]"
+      text-[0.85rem] h-[2.5rem] md:w-[18rem] pl-3 text-[#5A4034] focus:outline-none focus:border-[#F6E6DA]"
           type="tel"
           name="phone"
           required
@@ -94,7 +94,7 @@ function CreateOrder() {
         <div className="relative w-[18rem]">
           <input
             className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-normal text-[0.8rem] 
-        h-[2.5rem] w-full pl-3 focus:outline-none focus:border-[#F6E6DA]"
+        h-[2.5rem] md:w-full w-[11.8rem] pl-3 focus:outline-none focus:border-[#F6E6DA]"
             type="text"
             name="address"
             disabled={isLoadingAddress}
@@ -121,7 +121,7 @@ function CreateOrder() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-10 w-full col-span-2 flex justify-between items-center">
+        <div className="mt-10 w-full col-span-2 flex md:flex-row flex-col gap-5 md:gap-0 justify-between items-center">
           <div className="flex flex-row gap-2 items-center">
             <input
               type="checkbox"

@@ -12,11 +12,11 @@ function CartItem({ product }) {
 
   return (
     <div className="grid grid-cols-12 justify-center items-center">
-      <div className="col-span-6 font-['Quicksand'] text-[0.9rem] font-medium">
+      <div className="col-span-6 font-['Quicksand'] md:text-[0.9rem] text-[0.8rem] font-medium">
         {currentQuantity} × {name}
       </div>
 
-      <div className="col-span-2 font-['Quicksand'] text-[0.9rem] font-medium">
+      <div className="col-span-2 font-['Quicksand'] md:text-[0.9rem] text-[0.8rem] font-medium">
         {formatCurrency(currentQuantity * unitPrice)}
       </div>
 
