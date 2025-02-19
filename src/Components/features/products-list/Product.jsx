@@ -1,17 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
 import { addItem, getCurrentQuantityById } from "../cart/cartSlice";
 import { productsList } from "../../services/data";
 import plus from "../../../assets/plus.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell, faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 
 function Product({ productId }) {
   const dispatch = useDispatch();
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [fade, setFade] = useState(true);
 
   const allProducts = Object.values(productsList).flat();
   const product = allProducts.find((p) => p.id === productId);
@@ -36,18 +29,9 @@ function Product({ productId }) {
     );
   }
 
-  function openModal() {
-    setIsModalOpen(true);
-    setSelectedImageIndex(0);
-    setFade(true);
-  }
-
   return (
     <>
-      <div
-        className="h-[23rem] rounded-xl shadow-sm p-5 flex flex-col justify-between ite cursor-pointer group relative"
-        onClick={openModal}
-      >
+      <div className="h-[23rem] rounded-xl shadow-sm p-5 flex flex-col justify-between ite cursor-pointer group relative">
         <div className="flex justify-center items-center flex-grow">
           <div className="w-[14rem] h-[14rem] flex justify-center items-center">
             <img
@@ -79,7 +63,8 @@ function Product({ productId }) {
                 Sold out
               </p>
             )}
-            {!soldOut && !isInCart && (
+
+            {!soldOut && (
               <div
                 className="absolute top-4 right-4 bg-[#F6E6DA] rounded-md w-7 h-7 flex justify-center items-center hover:bg-[#e2ad8f] transition-all duration-500 opacity-0 group-hover:opacity-100"
                 onClick={(e) => {
