@@ -27,19 +27,26 @@ function Cart() {
           ))}
         </ul>
 
+        {/* #F6E6DA  (Soft Nude)
+ #FFFBF5  (Ivory White)
+ #E8B4B8  (Muted Rose)
+ #9C8F8F  (Satin Taupe)
+ #5A4034  (Deep Espresso)
+#D4B189  (Subtle Gold) */}
+
         <div className="flex flex-row justify-between items-center mt-20">
           <div className="flex flex-row gap-5">
             <Link to="/products-list">
               <button
-                className="font-['Quicksand'] font-medium text-[0.9rem] rounded-[1rem] text-[#2e1f1a]
-        h-9 w-36 cursor-pointer transition-all duration-500 bg-[#F6E6DA] hover:bg-[#F6E6DA] border border-[#F6E6DA] hover:border-[#F6E6DA]"
+                className="font-['Quicksand'] font-medium text-[0.9rem] rounded-[1rem] 
+        h-9 w-[9.5rem] cursor-pointer transition-all duration-500  bg-[#E8B4B8]/50 hover:bg-[#E8B4B8] border border-[#E8B4B850] hover:border-[#E8B4B8]"
               >
                 Return to Menu
               </button>
             </Link>
             <button
-              className="font-['Quicksand'] font-medium text-[0.9rem] rounded-[1rem] text-[#2e1f1a]
-        h-9 w-40 cursor-pointer transition-all duration-500 bg-[#FFFBF5] hover:bg-[#F6E6DA] border border-[#5A4034] hover:border-[#F6E6DA]"
+              className="font-['Quicksand'] font-medium text-[0.9rem] rounded-[1rem] text-[ #5A4034]
+        h-9 w-40 cursor-pointer transition-all duration-500 bg-[#FFFBF5] hover:bg-[#FFFBF5] border border-[#9C8F8F] hover:border-[#9C8F8F]"
               onClick={() => dispatch(clearCart())}
             >
               Remove All Items
@@ -47,11 +54,11 @@ function Cart() {
           </div>
 
           <div
-            className="h-9 w-32 cursor-pointer rounded-[1rem] border border-[#E8B4B8]/50 flex justify-center items-center
-          transition-all duration-500 bg-[#E8B4B8]/50 hover:bg-[#E8B4B8]  hover:border-[#E8B4B8]"
+            className="h-9 w-[8.5rem] cursor-pointer rounded-[1rem] border border-[#9C8F8F] flex justify-center items-center
+          transition-all duration-500 hover:bg-[#E8B4B8] bg-[#9C8F8F] hover:border-[#E8B4B8]"
           >
             <Link
-              className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]"
+              className="font-['Quicksand'] font-medium text-[0.9rem] text-[#FFFBF5]"
               to="/order/new"
             >
               Order pizzas

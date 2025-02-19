@@ -42,7 +42,7 @@ function CreateOrder() {
   return (
     <div className="mt-6 flex flex-col justify-center items-center">
       <p className="font-['Quicksand'] text-[1.2rem] text-[#2e1f1a] font-[500] leading-[6rem] tracking-[0.15rem]">
-        Ready to order? Let's go!
+        Ready to place your order? Let’s make it happen!
       </p>
 
       <div className="mt-6 border border-[#FFFBF5] w-2/3 pt-5 pb-5 pl-8 pr-8 rounded-[1.5rem] shadow-md"></div>
