@@ -58,71 +58,66 @@ function CreateOrder() {
 
       <Form
         method="POST"
-        className="mt-6 border border-[#FFFBF5] rounded-[1.5rem] shadow-md grid grid-cols-2 items-center p-5"
+        className="mt-6 border border-[#FFFBF5] rounded-[1.5rem] shadow-md grid grid-cols-2 gap-y-4 items-center p-5"
       >
-        {/* First Column - Labels */}
-        <div className="col-span-1 flex flex-col gap-y-4 items-start">
-          <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
-            First Name
-          </label>
+        {/* First Name */}
+        <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
+          First Name
+        </label>
+        <input
+          className="border border-[#F6E6DA] rounded-[1rem] text-[#5A4034] font-['Quicksand'] 
+      font-medium text-[0.85rem] h-[2.5rem] w-[18rem] pl-3 focus:outline-none focus:border-[#F6E6DA]"
+          type="text"
+          name="customer"
+          defaultValue={username}
+          required
+          placeholder="Enter your first name"
+        />
 
-          <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
-            Phone number
-          </label>
+        {/* Phone Number */}
+        <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
+          Phone Number
+        </label>
+        <input
+          className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium 
+      text-[0.85rem] h-[2.5rem] w-[18rem] pl-3 text-[#5A4034] focus:outline-none focus:border-[#F6E6DA]"
+          type="tel"
+          name="phone"
+          required
+          placeholder="Enter your phone number"
+        />
 
-          <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
-            Address
-          </label>
-        </div>
-
-        {/* Second Column - Inputs */}
-        <div className="col-span-1 flex flex-col gap-y-4 items-start">
+        {/* Address */}
+        <label className="font-['Quicksand'] font-medium text-[0.9rem] text-[#5A4034]">
+          Address
+        </label>
+        <div className="relative w-[18rem]">
           <input
-            className="border border-[#F6E6DA] rounded-[1rem] text-[#5A4034]
-        font-['Quicksand'] font-medium text-[0.85rem] h-[2.5rem] w-[18rem] pl-3 focus:outline-none focus:border-[#F6E6DA]"
+            className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-normal text-[0.8rem] 
+        h-[2.5rem] w-full pl-3 focus:outline-none focus:border-[#F6E6DA]"
             type="text"
-            name="customer"
-            defaultValue={username}
+            name="address"
+            disabled={isLoadingAddress}
+            defaultValue={address}
             required
-            placeholder="Enter your first name"
+            placeholder="Enter your address"
           />
-
-          <input
-            className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium 
-        text-[0.85rem] h-[2.5rem] w-[18rem] pl-3 text-[#5A4034] focus:outline-none focus:border-[#F6E6DA]"
-            type="tel"
-            name="phone"
-            required
-            placeholder="Enter your phone number"
-          />
-
-          <div className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-normal h-[7rem] w-[18rem] relative pl-3 flex items-center">
-            <input
-              className="font-['Quicksand'] font-normal text-[0.8rem] h-[2.5rem] w-full"
-              type="text"
-              name="address"
+          {!position.latitude && !position.longitude && (
+            <button
+              className="absolute cursor-pointer right-1 top-1"
               disabled={isLoadingAddress}
-              defaultValue={address}
-              required
-              placeholder="Enter your address"
-            />
-            {!position.latitude && !position.longitude && (
-              <button
-                className="absolute cursor-pointer right-1 top-1"
-                disabled={isLoadingAddress}
-                type="small"
-                onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(fetchAddress());
-                }}
-              >
-                <FontAwesomeIcon
-                  className="text-[#5A4034] w-9"
-                  icon={faLocationDot}
-                />
-              </button>
-            )}
-          </div>
+              type="small"
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(fetchAddress());
+              }}
+            >
+              <FontAwesomeIcon
+                className="text-[#5A4034] w-9"
+                icon={faLocationDot}
+              />
+            </button>
+          )}
         </div>
 
         {/* Bottom Section */}
