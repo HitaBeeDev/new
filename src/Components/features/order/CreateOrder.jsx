@@ -41,88 +41,87 @@ function CreateOrder() {
 
   if (!cart.length) return <EmptyCart />;
 
+  //   {
+  //     /* #F6E6DA  (Soft Nude)
+  //  #FFFBF5  (Ivory White)
+  //  #E8B4B8  (Muted Rose)
+  //  #9C8F8F  (Satin Taupe)
+  //  #5A4034  (Deep Espresso)
+  // #D4B189  (Subtle Gold) */
+  //   }
+
   return (
     <div className="mt-6 flex flex-col justify-center items-center">
       <p className="font-['Quicksand'] text-[1.2rem] text-[#2e1f1a] font-[500] leading-[6rem] tracking-[0.15rem]">
         Ready to place your order? Let’s make it happen!
       </p>
 
-      {/* #F6E6DA  (Soft Nude)
- #FFFBF5  (Ivory White)
- #E8B4B8  (Muted Rose)
- #9C8F8F  (Satin Taupe)
- #5A4034  (Deep Espresso)
-#D4B189  (Subtle Gold) */}
+      <Form
+        method="POST"
+        className="mt-6 border border-[#FFFBF5] rounded-[1.5rem] shadow-md grid grid-cols-2 items-center p-5"
+      >
+        <div className="col-span-1 flex flex-col items-start justify-start">
+          <label className="font-['Quicksand'] font-medium text-[0.9rem]">
+            First Name
+          </label>
 
-      <Form method="POST">
-        <div className="mt-6 border border-[#FFFBF5] pt-5 pb-5 pl-8 pr-8 rounded-[1.5rem] shadow-md w-[50rem]">
-          <div className="flex flex-row gap-3 items-end">
-            <label className="font-['Quicksand'] font-medium text-[0.9rem]">
-              First Name
-            </label>
+          <label className="font-['Quicksand'] font-medium text-[0.9rem] mt-5">
+            Phone number
+          </label>
 
+          <label className="font-['Quicksand'] font-medium text-[0.9rem] mt-5">
+            Address
+          </label>
+        </div>
+
+        <div className="col-span-1 flex flex-col items-start justify-start">
+          <input
+            className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium text-[0.9rem] h-[1.8rem] w-[15rem]"
+            type="text"
+            name="customer"
+            defaultValue={username}
+            required
+          />
+
+          <input
+            className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium text-[0.9rem] h-[1.8rem] w-[15rem] mt-5"
+            type="tel"
+            name="phone"
+            required
+          />
+          {formErrors?.phone && (
+            <p className="text-[#2e1f1a] font-[500] text-xs">
+              {formErrors.phone}
+            </p>
+          )}
+
+          <div className="mt-5">
             <input
               className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium text-[0.9rem] h-[1.8rem] w-[15rem]"
               type="text"
-              name="customer"
-              defaultValue={username}
+              name="address"
+              disabled={isLoadingAddress}
+              defaultValue={address}
               required
             />
-          </div>
-
-          <div className="flex flex-row gap-3 items-end">
-            <label className="font-['Quicksand'] font-medium text-[0.9rem]">
-              Phone number
-            </label>
-
-            <div>
-              <input
-                className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium text-[0.9rem] h-[1.8rem] w-[15rem]"
-                type="tel"
-                name="phone"
-                required
-              />
-              {formErrors?.phone && (
-                <p className="text-[#2e1f1a] font-[500] text-xs">
-                  {formErrors.phone}
-                </p>
-              )}
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-3 items-end">
-            <label className="font-['Quicksand'] font-medium text-[0.9rem]">
-              Address
-            </label>
-
-            <div>
-              <input
-                className="border border-[#F6E6DA] rounded-[1rem] font-['Quicksand'] font-medium text-[0.9rem] h-[1.8rem] w-[15rem]"
-                type="text"
-                name="address"
-                disabled={isLoadingAddress}
-                defaultValue={address}
-                required
-              />
-              {addressStatus === "error" && <p>{errorAddress}</p>}
-            </div>
+            {addressStatus === "error" && <p>{errorAddress}</p>}
 
             {!position.latitude && !position.longitude && (
-              <div>
-                <button
-                  disabled={isLoadingAddress}
-                  type="small"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(fetchAddress());
-                  }}
-                >
-                  <FontAwesomeIcon icon={faLocationDot} />
-                </button>
-              </div>
+              <button
+                disabled={isLoadingAddress}
+                type="small"
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(fetchAddress());
+                }}
+              >
+                <FontAwesomeIcon icon={faLocationDot} />
+              </button>
             )}
           </div>
+        </div>
 
+        <div>
           <div className="flex flex-row gap-3 items-end">
             <input
               type="checkbox"
