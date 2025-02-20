@@ -70,7 +70,7 @@ function Home() {
         </div>
 
         <div className="md:grid md:grid-cols-2 md:gap-4 md:h-full md:row-span-2 flex flex-col gap-8">
-          <div className="col-span-1 rounded-[1.5rem] relative overflow-hidden h-36 md:h-0">
+          <div className="col-span-1 rounded-[1.5rem] relative overflow-hidden h-36">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -93,7 +93,7 @@ function Home() {
           </div>
 
           <div
-            className="col-span-1 bg-[#E8B4B8]/30 text-[#5A4034] h-36 md:h-0
+            className="col-span-1 bg-[#E8B4B8]/30 text-[#5A4034] h-36 
           rounded-[1.5rem] flex items-center justify-center font-semibold text-xl tracking-[0.15rem]"
           >
             Join&nbsp;<span className="ml-1">+25K</span>&nbsp;happy users!
