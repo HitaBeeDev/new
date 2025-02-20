@@ -6,18 +6,6 @@ import shoppingBag from "../../assets/shoppingBag.svg";
 import { getTotalCartQuantity } from "../features/cart/cartSlice";
 import { Link } from "react-router-dom";
 
-// font-['Playfair_Display']
-// font-['Cormorant_Garamond']
-
-// Élan Beauty
-
-// #F6E6DA  (Soft Nude)
-// #FFFBF5  (Ivory White)
-// #E8B4B8  (Muted Rose)
-// #9C8F8F  (Satin Taupe)
-// #5A4034  (Deep Espresso)
-// #D4B189  (Subtle Gold)
-
 function Header() {
   const totalCartQuantity = useSelector(getTotalCartQuantity);
 
@@ -31,7 +19,7 @@ function Header() {
           Élan
         </Link>
 
-        {/* <p
+        <p
           className="font-['Quicksand'] text-[0.9rem] font-medium cursor-pointer 
   border border-transparent hover:border-[#F6E6DA] transition-all duration-500 
   h-8 w-28 rounded-[1rem] flex justify-center items-center text-[#5A4034]"
@@ -53,7 +41,7 @@ function Header() {
   h-8 w-40 rounded-[1rem] flex justify-center items-center text-[#5A4034]"
         >
           Customer Reviews
-        </p> */}
+        </p>
       </div>
 
       <div className="col-span-1 flex justify-end items-center gap-4">
