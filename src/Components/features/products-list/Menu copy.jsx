@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { getProductsList } from "../../services/apiRestaurant";
+import { getProductsList } from "../../services/helper";
 import Product from "./Product";
 
 function ProductsList() {

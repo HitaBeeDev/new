@@ -1,8 +1,5 @@
 import { productsList, orders } from "./data";
 
-// getMenu = getProductsList
-// menu = productsList
-
 export async function getProductsList() {
   return productsList;
 }
